@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MinhaLojaVirtual</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+  <div class="card">
+    <img src="favicon.ico" alt="favicon"> 
+  
+    <div class="card-body">
+      <h5 class="card-title"><produto.nome></h5>
+      <p class="card-text"><produto.descricao</p>
+      <button class="btn btn-primary">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="mb-4">Minha Loja Virtual</h1>
+    <div class="row">
+      <app-produto *ngFor="let produto of produtos" [produto]="produto"></app-produto>
+    </div>
+  </div>
+</body>
+</html>
